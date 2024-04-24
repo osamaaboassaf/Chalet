@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chalet Details</title>
+    <link rel="stylesheet" href="chaletinfo.css">
+</head>
+
+<body>
+    <div class="titel">
+        <h1>Chalet Details</h1>
+    </div>
+    <div class="container">
+        <div class="chalet-images">
+            <img src="chalet_1.jpeg">
+            <img src="chalet_1.jpeg">
+            <img src="chalet_1.jpeg">
+            <img src="chalet_1.jpeg">
+            <img src="chalet_1.jpeg">
+            <img src="chalet_1.jpeg">
+            <img src="chalet_1.jpeg">
+        </div>
+        <div class="chalet-details">
+            <p><strong>Price:</strong> $500 per night</p>
+            <p><strong>Space:</strong> 200 sqm</p>
+            <p><strong>Number of Rooms:</strong> 5</p>
+            <p><strong>Owner:</strong> John Doe</p>
+            <button type="button" class="bookbtn" onclick="openModal('bookChalet')">Book the chalet</button>
+        </div>
+
+
+    </div>
+    <div id="bookChalet" class="modal">
+        <div class="from_to">
+            <p>From:</p>
+            <input type="date" class="date" placeholder="Enter your answer">
+        </div>
+        <div class="from_to">
+            <p>To:</p>
+            <input type="date" class="date" placeholder="Enter your answer">
+        </div>
+        <button type="button" onclick="closeModal('bookChalet')">Done</button>
+    </div>
+
+    <script>
+        function openModal(modalId) {
+            document.getElementById(modalId).style.display = 'block';
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).style.display = 'none';
+        }
+    </script>
+</body>
+
+</html>
